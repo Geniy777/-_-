@@ -1,94 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Книжний Рай</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f8f4e3;
-            color: #333;
-        }
-
-        header {
-            background: #8b5e34;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav {
-            background: #d4a373;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .hero {
-            padding: 60px 20px;
-            text-align: center;
-            background: #faedcd;
-        }
-
-        .books {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-            gap: 20px;
-        }
-
-        .book {
-            background: white;
-            padding: 15px;
-            width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .book img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        footer {
-            background: #8b5e34;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Книжковий рай</title>
+  <style>
+    :root{--bg:#f6f7fb;--card:#fff;--accent:#6b5b95}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:#222;background:var(--bg)}
+    .site{max-width:1000px;margin:36px auto;padding:20px}
+    header{display:flex;gap:16px;align-items:center}
+    .logo{width:72px;height:72px;border-radius:12px;overflow:hidden;flex:0 0 72px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+    .logo img{width:100%;height:100%;object-fit:cover}
+    h1{font-size:28px;margin:0;color:var(--accent)}
+    p.lead{margin:6px 0 18px;color:#444}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .card{background:var(--card);padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.06);display:flex;flex-direction:column}
+    .card img{width:100%;height:220px;object-fit:cover;border-radius:8px}
+    .card h3{margin:10px 0 6px;font-size:16px}
+    .card p{margin:0;color:#555;font-size:14px}
+    footer{margin-top:20px;text-align:center;color:#777;font-size:13px}
+    @media (max-width:420px){.logo{width:56px;height:56px}.site{margin:18px}}
+  </style>
 </head>
 <body>
+  <div class="site">
+    <header>
+      <div class="logo">
+        <img src="https://source.unsplash.com/400x400/?books,reading" alt="Логотип - книжковий образ">
+      </div>
+      <div>
+        <h1>Книжковий рай</h1>
+        <p class="lead">Місце для улюблених книжок — галерея обкладинок та короткі описи.</p>
+      </div>
+    </header>
 
-<header>
-    <h1>Книжний Рай</h1>
-    <p>Місце, де кожен знайде свою історію</p>
-</header>
+    <main>
+      <section class="grid" aria-label="Галерея книг">
+        <article class="card">
+          <img src="https://source.unsplash.com/600x400/?book,library" alt="Обкладинка книги 1">
+          <h3>Затишні вечори</h3>
+          <p>Збірка оповідань для тих, хто любить тихі історії перед сном.</p>
+        </article>
 
-<nav>
-    <a href="#">Головна</a>
-    <a href="#">Каталог</a>
-    <a href="#">Новинки</a>
-    <a href="#">Контакти</a>
-</nav>
+        <article class="card">
+          <img src="https://source.unsplash.com/600x400/?bookshelf,books" alt="Обкладинка книги 2">
+          <h3>Класика у полицях</h3>
+          <p>Твори, що пережили століття та все ще вражають.</p>
+        </article>
 
-<section class="hero">
-    <h2>Ласкаво просимо до світу книжок!</h2>
-    <p>Обирай, читай, надихайся ♥</p>
-</section>
+        <article class="card">
+          <img src="https://source.unsplash.com/600x400/?reading,novel" alt="Обкладинка книги 3">
+          <h3>Нове відкриття</h3>
+          <p>Роман, який захоплює від першої сторінки.</p>
+        </article>
 
+        <article class="card">
+          <img src="https://source.unsplash.com/600x400/?stack,books" alt="Обкладинка книги 4">
+          <h3>Підбірка для мандрів</h3>
+          <p>Короткі розповіді та путівники для подорожей уявою.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      Змінюй картинки, підписи та стилі як хочеш — заміни URL зображень або текст.
+    </footer>
+  </div>
+</body>
+</html>
